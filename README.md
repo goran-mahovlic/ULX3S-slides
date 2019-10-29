@@ -1,6 +1,6 @@
 # ULX3S-slides
 
- ![Radiona](slides/000radio.ppm)
+ ![Radiona](pic/first.png)
 
 Put on SD card, needs to stay in slides directory
 
