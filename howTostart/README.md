@@ -45,13 +45,9 @@ You should get something like:
 f32c python uploader (under construction)
 
     MIPS Little-Endian header received
-
     ADDR 0x80000000 LEN 8208 CRC 0xF17DE856 OK
-
     ADDR 0x80002010 LEN 8192 CRC 0x58788D1D OK
-
     ADDR 0x80004010 LEN 6124 CRC 0xC922F84A OK
-
     JUMP 0x80000000
 
 Now you should see selftest screen
@@ -80,4 +76,110 @@ Experiment with other bit/img samples inside fpga folder
 
 ### ESP32
 
-If your board has ESP32 onboard -- it may be already loaded with 
+If your board has ESP32 onboard -- it may be already loaded with default web server
+
+First thing you need to do to start working with ESP32 directly is to load passthru into FLASH
+
+    ujprog -j flash fpga/passthru/passthru-v20-12f/passthru_ulx3s_v20_12k.bit
+
+Reset board!
+
+Now FPGA is connecting FTDI chip with ESP32 chip so you can use ESP32 independantly
+
+Check this tutorial if you want to use visual studio for ESP32 programming
+
+https://gojimmypi.blogspot.com/2019/06/ulx3s-and-visual-micro-in-visual-studio.html
+
+You can also use Arduino
+
+Board is really mature and you can load anything to ESP32 (you will not brake it)
+
+If you want to go back to web interface you need to reload ESP32
+
+While in ulx3s-bin folder 
+
+xxx if your FPGA version for example 12f
+
+     cd esp32
+     upload-executable.sh
+     upload-spiffs.sh websvf_sd/websvf_sd_v20_xxx.spiffs.bin
+
+When you have passthrue loaded you can also put SD card with wifi.config file and paste 
+
+    XXXX
+    XXXX
+    XXXX
+    XXXX
+
+To tell ESP32 on start to connect to your wifi router.
+
+Once you have SD card in place reboot board.
+
+If you have OLED connected it you will see IP adress of ESP32
+
+If not you can always find IP with 
+
+Change IP to be in you network IP range (usually 192.168.1.0)
+
+   nmap -sP XXX.XXX.XXX.0/24 
+
+When you have IP you can go to web browser and go to http://IP
+
+From there you can upload files to SD card or just load SVF files to FPGA
+
+# Using board with lattice diamond tool
+
+You can find lattice diamond tool online and use free license.
+
+After building bitstream you will need to use ujprog for loading bitstream as we shown before.
+
+# Using board with apio
+
+Check this repo to setup envirement
+
+https://github.com/ulx3s/fpga-odysseus
+
+Presentation setup is done by Miodrag
+
+https://github.com/mmicko
+
+After you have all you need you can follow this presentation
+
+https://github.com/ulx3s/fpga-odysseus/blob/master/presentation/FPGA%20Odysseus.pdf
+
+# Using board with opensource toolchain
+
+As apio does not have newest toolchain you may notice some problems...
+
+So best way to do development it to use opensource toolchain
+
+You can use this documentation
+
+https://github.com/emard/ulx3s-examples/blob/master/OpenSource-toolchain/README.md
+
+# Using board with IceStudio
+
+Still into deveopment you would need to wait a bit -- but mmicko has some progress
+
+https://github.com/mmicko/icestudio
+
+# Samples and links 
+
+https://github.com/emard/ulx3s-examples
+
+https://github.com/RadionaOrg/ulx3s-links
+
+https://radiona.org/ulx3s
+
+https://www.crowdsupply.com/radiona/ulx3s
+
+# Contacts 
+
+We hangout on gitter feal free to contact us!
+
+https://gitter.im/ulx3s/Lobby
+
+We are also on email: 
+
+ulx3s.fpga@gmail.com
+
