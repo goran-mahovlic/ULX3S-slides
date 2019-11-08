@@ -186,4 +186,32 @@ https://radiona.org/ulx3s
 
 https://www.crowdsupply.com/radiona/ulx3s
 
+### Social networks
 
+https://twitter.com/RadionaOrg
+
+https://hr-hr.facebook.com/Radiona.org/
+
+https://www.instagram.com/radiona_org/
+
+https://www.flickr.com/photos/lomodeedee/sets/
+
+### Main page
+
+https://radiona.org/
+
+#### Blogspots:
+
+https://trmm.net/Spispy
+
+https://gojimmypi.blogspot.com/search?q=ULX3S
+
+http://langster1980.blogspot.com/
+
+#### Wiki
+
+https://en.wikibooks.org/wiki/Oberon
+
+#### Articles
+
+https://eprint.iacr.org/2019/1152.pdf
