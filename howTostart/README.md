@@ -162,6 +162,10 @@ Still into development you would need to wait a bit -- but mmicko has some progr
 
 https://github.com/mmicko/icestudio
 
+### Using our board with fpgarduino
+
+https://github.com/f32c/fpgarduino
+
 ### Samples and links 
 
 https://github.com/emard/ulx3s-examples
