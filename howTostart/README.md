@@ -1,4 +1,4 @@
- # ULX3S startup guide
+# ULX3S startup guide
 
 First thing you will need are tools and binaries for ULX3S boards
 
@@ -64,3 +64,20 @@ That will load bitstream into FLASH, and it will reload into FPGA after reboot..
 
 Board is unbreakable by software so you can try...
 
+If you want to load bitstream that already contains binary for f32c we usually have .img file.
+
+ujprog f32c_ulx3s_v20_12k_selftest_100mhz_ws2_flash.img
+
+If it reports error you can just rename .img to .bin and reload
+
+mv f32c_ulx3s_v20_12k_selftest_100mhz_ws2_flash.img f32c_ulx3s_v20_12k_selftest_100mhz_ws2_flash.bit
+
+ujprog f32c_ulx3s_v20_12k_selftest_100mhz_ws2_flash.bit
+
+With img file loaded you shoud have selftest running in one step.
+
+Experiment with other bit/img samples inside fpga folder
+
+### ESP32
+
+If your board has ESP32 onboard -- it may be already loaded with 
