@@ -16,7 +16,7 @@ We will use ujprog for board programming.
 
 For x64 linux you just need to copy ujprog to some folder that will be in PATH
 
-    sudo cp usb-jtag/linux-amd64/ujprog /usr/local/bin
+    sudo cp usb-jtag/linux-amd64/ujprog /usr/local/bin/
 
 Now we can use ujprog tu upload bitstream to your board.
 
